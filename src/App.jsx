@@ -9,8 +9,14 @@ import "./App.css";
 import Navbar from "./Component/Navbar";
 import Myimg from './assets/WhatsApp Image 2024-10-28 at 18.37.39_737fc3f7.jpg'
 import Services from "./Component/Services";
-import WhyChooseUs from "./Component/WhyCooseUs";
+import WhyChooseUs from "./Component/WhyChooseUs";
 import MyWork from "./Component/MyWork";
+import DiscussProject from "./Component/DiscussProject";
+import Footer from "./Component/Footer";
+import SocialIcons from "./Component/SocialIcons";
+import Skills from "./Component/Skills";
+
+
 
 function App() {
  return (
@@ -53,23 +59,7 @@ function App() {
         </motion.p>
 
         {/* Social Icons */}
-        <motion.div
-          className="flex justify-center md:justify-start gap-4 mb-6 text-cyan-500 text-xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-        >
-          {[FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp].map((Icon, i) => (
-            <motion.a
-              key={i}
-              href="#"
-              whileHover={{ scale: 1.2, rotate: 10, color: "#22d3ee" }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Icon />
-            </motion.a>
-          ))}
-        </motion.div>
+   <SocialIcons></SocialIcons>
 
         {/* CTA Buttons */}
         <motion.div
@@ -116,9 +106,12 @@ function App() {
       </motion.div>
     </section>
     </header>
+  <Skills></Skills>
     <Services></Services>
     <WhyChooseUs></WhyChooseUs>
     <MyWork></MyWork>
+    <DiscussProject></DiscussProject>
+    <Footer></Footer>
   </div>
 );
 

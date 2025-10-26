@@ -1,43 +1,39 @@
 import { motion } from "framer-motion";
-
-// Example project images (replace with your own)
 import Project1 from "../assets/project1.png";
 import Project2 from "../assets/project2.png";
 import Project3 from "../assets/project3.png";
 import Project4 from "../assets/project4.png";
 
-
 const MyWork = () => {
   const projects = [
     {
       id: 1,
-      title: "App Management",
+      title: "App management",
       tech: "React + Tailwind",
       img: Project1,
-      link: "https://bitvaultforyou.netlify.app/",
+      link: "https://your-portfolio-demo.com",
     },
     {
       id: 2,
-      title: "Landing Page Design",
+      title: "Landing page Design",
       tech: "React + Firebase",
       img: Project2,
-      link: "https://greennest-4a10b.web.app/",
+      link: "https://your-ecommerce-demo.com",
     },
-   
     {
       id: 3,
-      title: "Portfolio Website",
-      tech: "Tailwind + Framer Motion",
+      title: "PortFolio",
+      tech: "React  + Framer Motion",
       img: Project3,
-      link: "#",
+      link: "https://your-blog-demo.com",
     },
     {
       id: 4,
       title: "E-Commerce Platform",
-      tech: "HTML5 + JavaScript ",
+      tech: "HTML5 + JavaScript",
       img: Project4,
-      link: "https://deshi-dealsbd.netlify.app/",
-    },
+      link: "https://your-chat-demo.com",
+    }
   ];
 
   const cardVariants = {
@@ -54,7 +50,7 @@ const MyWork = () => {
       id="work"
       className="bg-gradient-to-b from-[#00191e] via-[#001014] to-black text-white py-24"
     >
-      {/* Section Header */}
+      {/* Header */}
       <div className="text-center mb-16">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -72,9 +68,8 @@ const MyWork = () => {
           viewport={{ once: true }}
           className="text-gray-300 max-w-2xl mx-auto"
         >
-          A selection of my favorite projects that showcase creativity,
-          functionality, and attention to detail — built with modern web
-          technologies.
+          A selection of projects showcasing creativity, functionality, and
+          performance — crafted with modern web technologies.
         </motion.p>
       </div>
 
@@ -98,11 +93,13 @@ const MyWork = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00181b]/60 to-[#00181b] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00181b]/70 to-[#00181b] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
               <h3 className="text-xl font-semibold text-cyan-400 mb-1">
                 {project.title}
               </h3>
               <p className="text-gray-300 text-sm mb-4">{project.tech}</p>
+
+              {/* Button with link */}
               <a
                 href={project.link}
                 target="_blank"
